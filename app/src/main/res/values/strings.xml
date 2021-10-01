@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">EduEdu</string>
+    <string name="email">Email</string>
+    <string name="password">Senha</string>
+    <string name="enter">Login</string>
+    <string name="forgot_password">Esqueci senha</string>
+    <string name="year">Ano</string>
+    <string name="name">Nome</string>
+    <string name="filter">Filtrar por</string>
+    <string name="selecionar_aluno">Selecionar Aluno</string>
+    <string name="student">Aluno</string>
+    <string name="students">Alunos</string>
+    <string name="change_img">Mudar avatar</string>
+    <string name="salve">Salvar</string>
+    <string name="term_dados">Eu autorizo o EduEdu a coletar e processar os dados do meu filho(a) conforme a política de privacidade.</string>
+    <string name="todo">TODO</string>
+</resources>

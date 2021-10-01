@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.laiscouto.eduedu.MainActivity"
+    android:background="@drawable/bg_login">
+
+
+    <ImageView
+        android:id="@+id/vect_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:background="@drawable/ic_vector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_marginTop="54dp"
+        android:id="@+id/vect_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_vvector"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/vect_one"/>
+
+    <ImageView
+        android:id="@+id/vect_three"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_vecto_name"
+        app:layout_constraintTop_toBottomOf="@id/vect_two"
+        app:layout_constraintStart_toStartOf="@id/vect_one"/>
+
+    <ImageView
+        android:layout_marginTop="12dp"
+        android:id="@+id/vect_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_vector_e"
+        app:layout_constraintTop_toBottomOf="@id/vect_three"
+        app:layout_constraintStart_toStartOf="@id/vect_one"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/e"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="54dp"
+        android:background="@drawable/ic_e"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/vect_two"/>
+
+    <ImageView
+        android:id="@+id/e_bot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_e"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@id/e"
+        app:layout_constraintTop_toBottomOf="@id/e"/>
+
+    <ImageView
+        android:id="@+id/d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/ic_dtwo"
+        app:layout_constraintStart_toEndOf="@id/e"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/d_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="74dp"
+        android:background="@drawable/ic_d"
+        app:layout_constraintStart_toEndOf="@id/e_bot"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/u"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_u"
+        android:layout_marginTop="56dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/d"/>
+
+    <ImageView
+        android:id="@+id/u_bot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_u"
+        app:layout_constraintTop_toBottomOf="@id/u"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@id/d_two"/>
+
+    <EditText
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:drawableEnd="@drawable/ic_baseline_email_24"
+        android:background="@drawable/border_edit"
+        android:ems="10"
+        android:padding="16dp"
+        android:inputType="textEmailAddress"
+        android:id="@+id/name_add"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toBottomOf="@id/vect_four"
+        android:layout_marginTop="64dp"/>
+
+    <EditText
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:inputType="textPassword"
+        android:drawableEnd="@drawable/ic_baseline_visibility_off_24"
+        android:padding="16dp"
+        android:background="@drawable/border_edit"
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        app:layout_constraintTop_toBottomOf="@id/name_add"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:background="@color/white"
+        android:text="@string/email"
+        android:textColor="@color/blue_clear"
+        android:layout_marginBottom="52dp"
+        app:layout_constraintBottom_toBottomOf="@id/name_add"
+        app:layout_constraintStart_toStartOf="@id/name_add"
+        android:textSize="12sp"
+        />
+
+    <TextView
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:background="@color/white"
+        android:text="@string/password"
+        android:textColor="@color/blue_clear"
+        android:layout_marginBottom="57dp"
+        app:layout_constraintBottom_toBottomOf="@id/password"
+        app:layout_constraintStart_toStartOf="@id/password"
+        />
+
+    <Button
+        android:text="@string/enter"
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bt_login"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        android:layout_marginTop="64dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        />
+
+    <Button
+        android:textStyle="bold"
+        android:textColor="@color/blue_clear"
+        android:text="@string/forgot_password"
+        android:id="@+id/forgot_passwor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bt_forg_pass"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/login"
+        android:layout_margin="30dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

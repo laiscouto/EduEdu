@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.laiscouto.eduedu.AddStudentActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/add_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F7F7F7"
+            android:paddingStart="64dp"
+            android:theme="?attr/actionBarTheme"
+            app:title="Adicionar Aluno"
+            app:titleTextColor="@color/blue_clear"
+            tools:ignore="RtlSymmetry" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:layout_width="46dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+    <EditText
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:drawableEnd="@drawable/ic_baseline_person_24"
+        android:background="@drawable/border_edit"
+        android:ems="10"
+        android:padding="16dp"
+        android:inputType="textEmailAddress"
+        android:id="@+id/name_add"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_marginTop="64dp"/>
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:background="@color/white"
+        android:text="@string/name"
+        android:textColor="@color/blue_clear"
+        android:layout_marginBottom="52dp"
+        app:layout_constraintBottom_toBottomOf="@id/name_add"
+        app:layout_constraintStart_toStartOf="@id/name_add"
+        android:textSize="12sp"
+        />
+
+    <ImageView
+        android:id="@+id/img_studant"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:layout_constraintTop_toBottomOf="@id/name_add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/blue_clear"
+        android:layout_marginTop="17dp" />
+
+    <Button
+        android:textColor="@color/blue_clear"
+        android:text="@string/change_img"
+        android:id="@+id/change_img"
+        android:layout_width="218dp"
+        android:layout_height="47dp"
+        android:background="@drawable/bt_forg_pass"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_studant"
+        android:layout_margin="30dp"
+        tools:ignore="MissingConstraints" />
+
+    <CheckBox
+
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="24dp"
+        android:id="@+id/conf_dados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/change_img"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/change_img"
+        app:layout_constraintStart_toEndOf="@id/conf_dados"
+        android:text="@string/term_dados"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:text="@string/salve"
+        android:id="@+id/salve"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bt_login"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/conf_dados"
+        android:layout_marginTop="64dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbar_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/add_toolbar_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F7F7F7"
+            android:paddingStart="64dp"
+            android:theme="?attr/actionBarTheme"
+            app:titleTextColor="@color/blue_clear"
+            tools:ignore="RtlSymmetry" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/ic_baseline_home_24"/>
+
+    <ImageView
+        android:id="@+id/studant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:layout_marginStart="47dp"
+        app:layout_constraintStart_toEndOf="@id/home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/ic_vector_alun"/>
+
+    <TextView
+        android:id="@+id/text_st"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/students"
+        android:textColor="#21A2DA"
+        android:layout_marginBottom="17dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/studant"/>
+
+    <ImageView
+        android:id="@+id/calend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toEndOf="@id/text_st"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/ic_calendar"/>
+
+    <Button
+        android:layout_marginStart="22dp"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bt_studant"
+        app:layout_constraintTop_toTopOf="@id/studant"
+        app:layout_constraintStart_toEndOf="@id/home"
+        app:layout_constraintBottom_toBottomOf="@id/studant"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/calend"
+        android:src="@drawable/ic_vector_interr"/>
+
+
+    <ImageView
+        android:id="@+id/config"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/info"
+        android:src="@drawable/ic_ectorrrrr"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
