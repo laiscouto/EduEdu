@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.laiscouto.eduedu.MainActivity"
+    tools:context="com.laisCouto.eduedu.view.login.LoginMainActivity"
     android:background="@drawable/bg_login">
 
 

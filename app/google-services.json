@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "208367739263",
+    "project_id": "eduedu-laiscouto",
+    "storage_bucket": "eduedu-laiscouto.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:208367739263:android:d9d1d72bfbacf682e07a4a",
+        "android_client_info": {
+          "package_name": "com.laiscouto.eduedu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "208367739263-viqdjdj8qbvnordl3176q5tmoshudrd9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAONvtnfjBfyHbaYu0DPCy1WJax_zd-Qd0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "208367739263-viqdjdj8qbvnordl3176q5tmoshudrd9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

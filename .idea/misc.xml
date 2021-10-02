@@ -16,9 +16,9 @@
         <entry key="app/src/main/res/drawable/ic_vector.xml" value="0.6453125" />
         <entry key="app/src/main/res/drawable/ic_vector_e.xml" value="0.6453125" />
         <entry key="app/src/main/res/drawable/ic_vvector.xml" value="0.387037037037037" />
-        <entry key="app/src/main/res/layout/activity_add_student.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_add_student.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/activity_search_student.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_search_student.xml" value="0.5" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.23148148148148148" />
       </map>
     </option>

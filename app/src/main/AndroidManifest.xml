@@ -10,14 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EduEdu">
         <activity
-            android:name="com.laiscouto.eduedu.AddStudentActivity"
+            android:name=".view.AddStudentActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
-            android:name="com.laiscouto.eduedu.SearchStudentActivity"
+            android:name=".view.SearchStudentActivity"
             android:exported="true" />
         <activity
-            android:name="com.laiscouto.eduedu.MainActivity"
+            android:name=".view.login.LoginMainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
