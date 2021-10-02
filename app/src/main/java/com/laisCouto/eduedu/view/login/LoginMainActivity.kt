@@ -3,6 +3,8 @@ package com.laisCouto.eduedu.view.login
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 import com.laisCouto.eduedu.R
 
 class LoginMainActivity : AppCompatActivity() {
@@ -15,10 +17,8 @@ class LoginMainActivity : AppCompatActivity() {
         observe()
         val bt = findViewById<Button>(R.id.login)
         bt.setOnClickListener {
-            println(25)
-            observe()
+            validateLogin()
         }
-        viewModel.authetication("laiskarliamecouto@gmail.com","lais123456")
 
 
     }
@@ -27,18 +27,31 @@ class LoginMainActivity : AppCompatActivity() {
         viewModel.observeState().observe(this, {
             when(it){
                 is LoginAuthenticationState.Loading->{
-                    println("Loanding")}
+
+                    }
+
                 is LoginAuthenticationState.Error->{
-                    println("error")
+
                 }
                 is LoginAuthenticationState.Success->{
-                    println("Success")
+
                 }
 
             }
         }
 
         )
+    }
+
+    private fun validateLogin(){
+        val email = findViewById<EditText>(R.id.name_add).text.toString()
+        val password = findViewById<EditText>(R.id.password).text.toString()
+
+         if(email != "" && password != ""){
+             viewModel.authetication(email, password)
+         }else{
+             Toast.makeText(this, "Informe a validação", Toast.LENGTH_LONG).show()
+         }
     }
 
 

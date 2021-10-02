@@ -21,22 +21,19 @@ class LoginViewModel: ViewModel() {
             state.postValue(LoginAuthenticationState.Loading)
             try {
                 val result = repo.singIn(email, password)
-                if(result.success){
-                    println("Sucessooooooooooooooooooooooooooooooooooooooooooooooo")
-                    println( handleSuccess(resultField))
-                }else{
-                    println("Deu ruuuuuuuuuuuuuuuuuuuuuuuuuuim")
-                    println(result)
+                if (result.success) {
+                    handleSuccess()
+                } else {
+                    handleError()
                 }
-            } catch(e: Exception){
-                println("==========${handleError()}")
+            } catch (e: Exception) {
+                handleError()
             }
         }
-
     }
 
-    private fun handleSuccess(list: MutableList<List<Pair<String, String>>>){
-        state.postValue(LoginAuthenticationState.Success(list))
+    private fun handleSuccess(){
+        state.postValue(LoginAuthenticationState.Success)
     }
 
     private fun handleError(){
