@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.laisCouto.eduedu.view.AddStudentActivity">
+    tools:context="com.laisCouto.eduedu.view.addstudent.AddStudentActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/toolbar"
@@ -117,24 +117,6 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         />
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/toolbar_bottom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/add_toolbar_bottom"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#F7F7F7"
-            android:paddingStart="64dp"
-            android:theme="?attr/actionBarTheme"
-            app:titleTextColor="@color/blue_clear"
-            tools:ignore="RtlSymmetry" />
-    </com.google.android.material.appbar.AppBarLayout>
 
     <ImageView
         android:id="@+id/home"

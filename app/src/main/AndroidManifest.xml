@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.laisCouto.eduedu">
 
     <application
@@ -10,12 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EduEdu">
         <activity
-            android:name=".view.AddStudentActivity"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity
-            android:name=".view.SearchStudentActivity"
+            android:name=".view.addstudent.AddStudentActivity"
             android:exported="true" />
+        <activity
+            android:name=".view.searchstudent.SearchStudentActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan"
+            />
         <activity
             android:name=".view.login.LoginMainActivity"
             android:exported="true">
@@ -26,5 +28,8 @@
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        tools:ignore="ManifestOrder" />
 
 </manifest>

@@ -4,24 +4,24 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.laisCouto.eduedu.service.AuthenticationRepository
+import com.laisCouto.eduedu.service.DatabaseRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.lang.Exception
 
 class LoginViewModel: ViewModel() {
-    private val repo = AuthenticationRepository()
-    private val state = MutableLiveData<LoginAuthenticationState>()
+    private val repo = DatabaseRepository()
+    private val state = MutableLiveData<AddState>()
     private val resultField = mutableListOf<List<Pair<String, String>>>()
 
-    fun observeState(): LiveData<LoginAuthenticationState> = state
+    fun observeState(): LiveData<AddState> = state
 
     fun authetication(email: String, password: String){
         viewModelScope.launch(Dispatchers.Main){
-            state.postValue(LoginAuthenticationState.Loading)
+            state.postValue(AddState.Loading)
             try {
                 val result = repo.singIn(email, password)
-                if (result.success) {
+                if (result) {
                     handleSuccess()
                 } else {
                     handleError()
@@ -33,11 +33,11 @@ class LoginViewModel: ViewModel() {
     }
 
     private fun handleSuccess(){
-        state.postValue(LoginAuthenticationState.Success)
+        state.postValue(AddState.Success)
     }
 
     private fun handleError(){
-        state.postValue(LoginAuthenticationState.Error)
+        state.postValue(AddState.Error)
 
     }
 }

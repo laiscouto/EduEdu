@@ -4,20 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.laisCouto.eduedu.view.SearchStudentActivity">
+    tools:context="com.laisCouto.eduedu.view.searchstudent.SearchStudentActivity">
 
     <TextView
         android:id="@+id/text_select_stundent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
         android:text="@string/selecionar_aluno"
-        android:textSize="18sp"
         android:textColor="@color/blue_clear"
+        android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginTop="32dp"
-        android:layout_marginStart="30dp"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:layout_marginStart="30dp"
@@ -61,6 +61,7 @@
         />
 
     <Button
+        android:id="@+id/bt_grade"
         android:textColor="@color/blue_clear"
         android:textStyle="bold"
         android:textSize="10sp"
@@ -76,14 +77,18 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"
-        android:background="#E5E5E5"
-        android:layout_marginTop="12dp"
         android:layout_width="match_parent"
         android:layout_height="479dp"
-        app:layout_constraintBottom_toTopOf="@id/toolbar_bottom"
-        app:layout_constraintTop_toBottomOf="@id/bt_name"/>
+        android:layout_marginTop="12dp"
+        android:background="#E5E5E5"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_name"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="16dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating"
         android:src="@drawable/ic_baseline_add_24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -94,31 +99,14 @@
         android:backgroundTint="@color/blue_clear"
         android:contentDescription="@string/todo" />
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/toolbar_bottom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/add_toolbar_bottom"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#F7F7F7"
-            android:paddingStart="64dp"
-            android:theme="?attr/actionBarTheme"
-            app:titleTextColor="@color/blue_clear"
-            tools:ignore="RtlSymmetry" />
-    </com.google.android.material.appbar.AppBarLayout>
-    
     <ImageView
         android:id="@+id/home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/toolbar_bottom"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:layout_marginStart="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:src="@drawable/ic_baseline_home_24"/>
 
@@ -126,8 +114,8 @@
         android:id="@+id/studant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/toolbar_bottom"
-        android:layout_marginTop="23dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="22dp"
         android:layout_marginStart="47dp"
         app:layout_constraintStart_toEndOf="@id/home"
         android:src="@drawable/ic_vector_alun"/>
@@ -144,19 +132,19 @@
     <Button
         android:layout_marginStart="22dp"
         android:layout_width="120dp"
-        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_height="38dp"
         android:background="@drawable/bt_studant"
-        app:layout_constraintTop_toTopOf="@id/toolbar_bottom"
         app:layout_constraintStart_toEndOf="@id/home"
-        app:layout_constraintBottom_toBottomOf="@id/toolbar_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/toolbar_bottom"
-        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
         android:layout_marginStart="140dp"
         app:layout_constraintStart_toEndOf="@id/studant"
         android:src="@drawable/ic_vector_interr"/>
@@ -166,8 +154,8 @@
         android:id="@+id/config"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/toolbar_bottom"
-        android:layout_marginTop="21dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
         android:layout_marginStart="56dp"
         app:layout_constraintStart_toEndOf="@id/info"
         android:src="@drawable/ic_ectorrrrr"/>
